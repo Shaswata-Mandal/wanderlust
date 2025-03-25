@@ -1,0 +1,74 @@
+<% layout("/layouts/boilerplate") %>
+
+<body>
+
+    <div class="row mt-3">
+        <div class="col">
+            <!-- <h1 id="form-title" class="mb-4">Signup/Login on Wanderlust</h1> -->
+
+            <div class="login_container mb-4">
+                <div class="forms-container">
+
+                    <div class="form" id="login-form">
+
+                    <!-- Login Form -->
+                    <form class="needs-validation" novalidate method="post" action="/login">
+                        <div class="mb-3 mt-3">
+                            <label for="login-username" class="form-label">User Name</label>
+                            <input type="text" id="login-username" name="username" class="form-control"
+                                placeholder="Enter username" required>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+        
+                        <div class="mb-3">
+                            <label for="login-password" class="form-label">Password</label>
+                            <input type="password" id="login-password" name="password" class="form-control"
+                                placeholder="Enter password" required>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+        
+                        <button class="btn btn-success mb-3 login-button" type="submit">Login</button>
+                    </form>
+                </div>
+                    
+                    <!-- Signup Form -->
+                    <div class="form" id="signup-form">
+                        <form class="needs-validation" novalidate method="post" action="/signup">
+
+                            <div class="mb-3 mt-3">
+                                <label for="signup-username" class="form-label">User Name</label>
+                                <input type="text" id="signup-username" name="username" class="form-control"
+                                    placeholder="Enter username" required>
+                                <div class="valid-feedback">Looks good!</div>
+                            </div>
+            
+                            <div class="mb-3">
+                                <label for="signup-email" class="form-label">Email</label>
+                                <input type="email" id="signup-email" name="email" class="form-control"
+                                    placeholder="Enter email" required>
+                                <div class="valid-feedback">Looks good!</div>
+                            </div>
+            
+                            <div class="mb-3">
+                                <label for="signup-password" class="form-label">Password</label>
+                                <input type="password" id="signup-password" name="password" class="form-control"
+                                    placeholder="Enter password" required>
+                                <div class="valid-feedback">Looks good!</div>
+                            </div>
+            
+                            <button class="btn btn-success mb-3 signup-button" type="submit">Sign Up</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="floating-panel" id="floating-panel">
+                    <p id="panel-text">New here?</p>
+                    <button id="toggle-button">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="login_signup.js"></script>
+
+</body>

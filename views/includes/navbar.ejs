@@ -1,0 +1,53 @@
+
+<header>
+
+    <nav>
+
+        <div class="nav_bar">
+            <div class="logo">
+                <div class="icon"><i class="fa-solid fa-compass"></i></div>
+                <span>wanderlust</span>
+            </div>
+
+            <div class="search-bar">
+                <div class="search-item">
+                    <input type="text" placeholder="Search your next destination">
+                    <label>By city, country or category</label>
+                </div>
+            
+                <button class="search-button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+                <div class="search-suggestion">
+                    <!-- <div class="suggestion-item"><i class="fa-solid fa-magnifying-glass" style="margin-right:5px;"></i> Hello World</div> -->
+                </div>
+            </div>
+
+            
+            
+
+            <div class="nav_options">
+                <ul>
+
+                    <% if(currUser){ %>
+                    <li><span class="username-display"><%= currUser.username.toUpperCase() %></span></li>
+                    <% } %>
+                    <li><a href="/listings">Explore</a></li>
+                    <li><a href="/listings/new">Wanderlust your home</a></li>
+
+                    <% if (!currUser) { %>
+                        <li><a href="/login">Sign up/Log in</a></li>
+                    <% } %>
+
+                    <% if (currUser) { %>
+                        <li><a href="/logout">Log out</a></li>
+                    <% } %>
+                </ul>
+
+            </div>
+        </div>
+
+    </nav>
+
+</header>

@@ -1,0 +1,25 @@
+<% if(successMsg && successMsg.length){ %>
+<div class="alert alert-success fixed-alert alert-dismissible fade show mt-80 flash-message" role="alert">
+    <%= successMsg %>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<% } %>
+
+<% if(errorMsg && errorMsg.length){ %>
+    <div class="alert alert-danger fixed-alert alert-dismissible fade show mt-80 flash-message" role="alert">
+        <%= errorMsg %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<% } %>
+
+<script>
+    // Wait 3 seconds, then fade out flash messages
+    setTimeout(() => {
+        let flashMessages = document.querySelectorAll(".flash-message");
+        flashMessages.forEach(msg => {
+            msg.style.transition = "opacity 0.5s ease-out";
+            msg.style.opacity = "0";
+            setTimeout(() => msg.remove(), 500); // Remove after fade-out
+        });
+    }, 3000);
+</script>

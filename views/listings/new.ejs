@@ -1,0 +1,228 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+
+  <div class="edit-form-container">
+  
+    <div class="row">
+  
+      <div class="col-md-12">
+  
+        <div class="row d-flex justify-content-center mb-3 mt-0">
+          <div class="col-md-12 text-center" style="font-size: 2rem;">
+            Wanderlust your home
+          </div>
+        </div>
+  
+        <form class="row g-3 needs-validation" novalidate method="post" action="/listings" enctype="multipart/form-data">
+  
+          <!-- Listing Name and Price in a Single Line -->
+          <div class="row mt-4">
+            <div class="col-md-6">
+              <div class="form-group position-relative">
+                <label for="listing-title" class="form-label mr-5">Listing Name</label>
+                <input type="text" id="listing-title" name="listing[title]" class="form-control "
+                  placeholder="Enter Listing Name" required>
+                <div class="invalid-feedback position-absolute">
+                  Please provide a title.
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-6">
+              <div class="form-group position-relative">
+                <label for="listing-price" class="form-label">Listing Price</label>
+                <input type="number" id="listing-price" name="listing[price]" class="form-control"
+                  placeholder="Enter Listing Price" required>
+                <div class="invalid-feedback position-absolute">
+                  Please provide a price.
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Listing Description in a Single Line -->
+          <div class="row mt-4">
+            <div class="col-md-12">
+              <div class="form-group position-relative">
+                <label for="listing-description" class="form-label">Listing Description</label>
+                <textarea id="listing-description" name="listing[description]" class="form-control"
+                  placeholder="Enter Listing Description" required></textarea>
+                <div class="invalid-feedback position-absolute">
+                  Please provide a description.
+                </div>
+              </div>
+            </div>
+          </div>
+  
+  
+          <!-- Listing Image Input in Another Line -->
+          <div class="row mt-4">
+            <div class="col-md-12">
+              <label class="form-label">Listing Image</label>
+  
+              <div class="row align-items-center">
+                <!-- Buttons on the left -->
+                <div class="col-auto d-flex">
+  
+  
+                  <div class="form-check p-0 me-2">
+                    <input type="radio" class="btn-outline form-check-input" id="urlImageOption" autocomplete="off"
+                      value="url" style="display: none;">
+                    <label class="btn form-check-label btn-outline-success" for="urlImageOption">Provide URL</label>
+                  </div>
+  
+                  <div class="form-check p-0 ">
+                    <input type="radio" class="btn-outline form-check-input" id="uploadImageOption" autocomplete="off"
+                      value="upload" style="display: none;">
+                    <label class="btn form-check-label btn-outline-success" for="uploadImageOption">Upload Image</label>
+                  </div>
+  
+  
+                </div>
+  
+                <!-- Input field covering remaining space -->
+                <div class="col">
+                  <!-- File Upload Input -->
+                  <input type="file" id="listing-file" name="listing[imageFile]" class="form-control "
+                    style="display: none;">
+  
+                  <!-- URL Input (Initially Hidden) -->
+                  <input type="text" id="listing-url" name="listing[imageUrl]" class="form-control "
+                    placeholder="Enter Image URL">
+                </div>
+              </div>
+            </div>
+          </div>
+  
+  
+          <!-- Listing category in a Single Line -->
+          <div class="row mt-4">
+            <div class="col-md-12">
+              <label for="listing-categories" class="form-label">Categories</label>
+              <select id="listing-categories" size="10" name="listing[categories][]" class="form-select form-control"
+                multiple required>
+                <option value="amazing_pools">Amazing Pools</option>
+                <option value="icons">Icons</option>
+                <option value="omg">OMG!</option>
+                <option value="islands">Islands</option>
+                <option value="countryside">Countryside</option>
+                <option value="new">New</option>
+                <option value="amazing_views">Amazing Views</option>
+                <option value="farms">Farms</option>
+                <option value="mansion">Mansion</option>
+                <option value="bed_and_breakfast">Bed & Breakfast</option>
+                <option value="beachfront">Beachfront</option>
+                <option value="luxe">Luxe</option>
+                <option value="tiny_homes">Tiny Homes</option>
+                <option value="lake">Lake</option>
+                <option value="towers">Towers</option>
+                <option value="treehouses">Treehouses</option>
+                <option value="top_of_the_world">Top of the World</option>
+                <option value="room">Room</option>
+                <option value="cabins">Cabins</option>
+                <option value="skiing">Skiing</option>
+                <option value="national_parks">National Parks</option>
+                <option value="houseboats">Houseboats</option>
+                <option value="arctic">Arctic</option>
+                <option value="camping">Camping</option>
+                <option value="lakefront">Lakefront</option>
+                <option value="boats">Boats</option>
+                <option value="trending">Trending</option>
+                <option value="domes">Domes</option>
+                <option value="caves">Caves</option>
+                <option value="play">Play</option>
+                <option value="a_frames">A-Frames</option>
+                <option value="earth_homes">Earth Homes</option>
+                <option value="castles">Castles</option>
+                <option value="tropical">Tropical</option>
+                <option value="camper_vans">Camper Vans</option>
+                <option value="design">Design</option>
+                <option value="surfing">Surfing</option>
+                <option value="historical_homes">Historical Homes</option>
+                <option value="top_cities">Top Cities</option>
+                <option value="vineyards">Vineyards</option>
+                <option value="golfing">Golfing</option>
+                <option value="hanoks">Hanoks</option>
+                <option value="cycladic_homes">Cycladic Homes</option>
+                <option value="windmills">Windmills</option>
+                <option value="chefs_kitchens">Chef's Kitchens</option>
+                <option value="shepherds_huts">Shepherd's Huts</option>
+                <option value="casas_particulares">Casas Particulares</option>
+                <option value="desert">Desert</option>
+                <option value="ryokans">Ryokans</option>
+                <option value="minsus">Minsus</option>
+                <option value="yurts">Yurts</option>
+                <option value="barns">Barns</option>
+                <option value="ski-in_or_out">Ski-in/Ski-out</option>
+                <option value="off_the_grid">Off the Grid</option>
+                <option value="adapted">Adapted</option>
+                <option value="containers">Containers</option>
+                <option value="beach">Beach</option>
+                <option value="riads">Riads</option>
+                <option value="trulli">Trulli</option>
+              </select>
+              <small class="form-text text-muted">Hold down Ctrl (Windows) or Command (Mac) to select multiple
+                categories.</small>
+            </div>
+          </div>
+  
+  
+          <!-- Listing City and Country in a Single Line -->
+          <div class="row mt-4">
+            <div class="col-md-6">
+              <div class="form-group position-relative">
+                <label for="listing-location" class="form-label">Listing City</label>
+                <input type="text" id="listing-location" name="listing[location]" class="form-control"
+                  placeholder="Enter Listing City" required>
+                <div class="invalid-feedback position-absolute">
+                  Please provide a valid city.
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-6">
+              <div class="form-group position-relative">
+                <label for="listing-country" class="form-label">Listing Country</label>
+                <input type="text" id="listing-country" name="listing[country]" class="form-control"
+                  placeholder="Enter Listing Country" required>
+                <div class="invalid-feedback position-absolute">
+                  Please provide a valid country.
+                </div>
+              </div>
+            </div>
+          </div>
+  
+  
+  
+          <!-- Submit Button -->
+          <div class="row mt-5 mb-4">
+            <div class="col-12 d-flex justify-content-center">
+              <button class="btn btn-primary w-50" type="submit">Submit</button>
+            </div>
+          </div>
+  
+  
+      </div>
+    </div>
+  
+  
+  
+  
+  </div>
+
+  <script>
+    // Toggle between file upload and URL input
+    document.getElementById("uploadImageOption").addEventListener("click", function () {
+        document.getElementById("listing-file").style.display = "block";
+        document.getElementById("listing-url").value='';
+        document.getElementById("listing-url").style.display = "none";
+    });
+
+    document.getElementById("urlImageOption").addEventListener("click", function () {
+        document.getElementById("listing-file").style.display = "none";
+        document.getElementById("listing-file").value='';
+        document.getElementById("listing-url").style.display = "block";
+    });
+</script>
+
+</body>

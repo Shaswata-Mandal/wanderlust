@@ -1,0 +1,5 @@
+#joi
+
+joi is used for validating schema for error handling
+--> we create a schema(not the moongoose schema) for the joi to validate the data coming for the database
+    to accompalish server side error handling

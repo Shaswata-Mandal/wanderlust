@@ -1,0 +1,77 @@
+#form-title{
+    text-align: center;
+    margin-bottom: 20px;
+    margin-right: 40px;
+}
+
+.new-listing-form-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+/* Form container */
+#listing-form {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0);
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: auto;
+}
+
+/* Input fields */
+#listing-title,
+#listing-description,
+#listing-url,
+#listing-price,
+#listing-location,
+#listing-country {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.3s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Input hover and focus effect */
+#listing-title:focus,
+#listing-description:focus,
+#listing-url:focus,
+#listing-price:focus,
+#listing-location:focus,
+#listing-country:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Textarea styling */
+#listing-description {
+    resize: none;
+    height: 80px;
+}
+
+/* Submit button */
+#submit-btn {
+    background: #007BFF;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Hover effect on button */
+#submit-btn:hover {
+    background: #0056b3;
+}

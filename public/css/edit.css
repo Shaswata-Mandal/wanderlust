@@ -1,0 +1,11 @@
+.edit-form-container{
+    max-width: 850px;
+    min-width: 850px;
+}
+
+.edit-img{
+    height: 300px;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}

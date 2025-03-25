@@ -1,0 +1,91 @@
+
+.login_container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 20px;
+    margin: 0;
+    box-shadow: 2px 2px 20px black;
+    background: white;
+}
+.forms-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.form {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    padding: 2rem;
+    text-align: center;
+    transition: opacity 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.form h2{
+    margin-bottom: 20px;
+}
+.form label {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.form input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin-top: 15px;
+}
+#signup-form{
+    position: absolute;
+    left: 0px;
+}
+#login-form{
+    position: absolute;
+    right: 0px;
+}
+.login-button, .signup-button {
+    background-color: #fe424d !important;
+}
+.login-button:hover, .signup-button:hover {
+    background-color: #fe424fb0 !important;
+}
+.floating-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #fe424d;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: transform 0.5s ease-in-out;
+}
+.floating-panel button {
+    margin-top: 10px;
+    padding: 10px;
+    min-width: 70px;
+    border: none;
+    border-radius: 5px;
+    background: white;
+    color: black;
+    cursor: pointer;
+}
