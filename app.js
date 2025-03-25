@@ -106,7 +106,7 @@ app.listen(port, ()=>{
 
 //normal route
 app.get("/", (req, res)=>{
-    res.send("working");
+    res.redirect("/listings");
 });
 
 
