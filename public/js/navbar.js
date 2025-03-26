@@ -98,7 +98,7 @@ function updateListingsForSearch(listings) {
         return;
     }
 
-    let listingsHtml = `<div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 mt-5 pt-3" style="width: 900vw;">`;
+    let listingsHtml = `<div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 mt-5 pt-3" style="width: 90vw;">`;
 
     listings.forEach(listing => {
         // ✅ Calculate rating average dynamically

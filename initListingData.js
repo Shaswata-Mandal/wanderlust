@@ -30,7 +30,7 @@ let sampleListings = [
         price: 1500,
         location: "Malibu",
         country: "United States",
-        categories: ["beachfront", "amazing_views", "luxe", "lakefront"] // 🏝️ Beach, Ocean View, Luxury
+        categories: ["beachfront", "amazing_views", "luxe", "lakefront"]
     },
     {
         title: "Modern Loft in Downtown",
@@ -43,7 +43,7 @@ let sampleListings = [
         price: 1200,
         location: "New York City",
         country: "United States",
-        categories: ["top_cities", "icons", "design", "room"] // 🏙️ Urban Stay, Iconic, Stylish
+        categories: ["top_cities", "icons", "design", "room"]
     },
     {
         title: "Mountain Retreat",
@@ -56,7 +56,7 @@ let sampleListings = [
         price: 1000,
         location: "Aspen",
         country: "United States",
-        categories: ["cabins", "skiing", "countryside", "top_of_the_world"] // 🏔️ Cabin, Skiing, Nature
+        categories: ["cabins", "skiing", "countryside", "top_of_the_world"]
     },
     {
         title: "Historic Villa in Tuscany",
@@ -69,7 +69,7 @@ let sampleListings = [
         price: 2500,
         location: "Florence",
         country: "Italy",
-        categories: ["castles", "vineyards", "historical_homes", "luxe"] // 🍇 Castle, Wine Country, Luxury
+        categories: ["castles", "vineyards", "historical_homes", "luxe"]
     },
     {
         title: "Secluded Treehouse Getaway",
@@ -82,7 +82,7 @@ let sampleListings = [
         price: 800,
         location: "Portland",
         country: "United States",
-        categories: ["treehouses", "off_the_grid", "amazing_views", "camping"] // 🌲 Treehouse, Remote Stay, Nature
+        categories: ["treehouses", "off_the_grid", "amazing_views", "camping"]
     },
     {
         title: "Beachfront Paradise",
