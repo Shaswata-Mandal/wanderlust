@@ -31,7 +31,7 @@ const store = MongoStore.create({
     touchAfter: 24*3600,
 });
 
-store.on("error", ()=>{
+store.on("error", (err)=>{
     console.log("Error in mongo session store", err);
 });
 
@@ -99,11 +99,6 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
 
-//server start listening to the requests
-app.listen(port, ()=>{
-    console.log(`Server is listening at port ${port}`);
-});
-
 //normal route
 app.get("/", (req, res)=>{
     res.redirect("/listings");
@@ -118,22 +113,23 @@ app.get("/", (req, res)=>{
 
 async function main() {
     await mongoose.connect(dbUrl);
+    console.log("Connection with DB successful!");
+
+    app.listen(port, ()=>{
+        console.log(`Server is listening at port ${port}`);
+    });
 }
 
-main()
-    .then((res)=>{
-        console.log("Connection with DB successful!");
-    })
-    .catch((err)=>{
-        console.log(err);
-    });
+main().catch((err)=>{
+    console.log("DB Connection Failed:", err);
+});
 
 
 //Middleware for using the flash messages defined in the routes
 app.use((req, res, next)=>{
     res.locals.successMsg= req.flash("success");
     res.locals.errorMsg= req.flash("error");
-    res.locals.currUser= req.user;
+    res.locals.currUser= req.user || null;
     next();
 })
 
