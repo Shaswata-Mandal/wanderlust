@@ -87,6 +87,7 @@ app.set("ejs", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "/public/css")));
 app.use(express.static(path.join(__dirname, "/public/js")));
 app.use(express.static(path.join(__dirname, "/public/assets")));
+app.use(express.static(path.join(__dirname, "/public/assets")));
 
 //using method-override
 app.use(methodOverride("_method"));
